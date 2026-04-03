@@ -1,7 +1,6 @@
 # ✍️ Blog Writing Agent (LangGraph + Streamlit)
 
-An **AI-powered Blog Writing Agent** built using **LangGraph, LangChain, and Streamlit**.  
-This system automatically generates **structured, research-backed blog posts**.
+An **AI-powered Blog Writing Agent** built using **LangGraph, LangChain, and Streamlit**. This system automatically generates **structured, research-backed blog posts**.
 
 ---
 
