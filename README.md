@@ -191,41 +191,11 @@ Create a `.env` file:
 - **Storage:** Local files  
 
 ---
-
-## ⚠️ Limitations
-
-- Requires API keys (OpenAI, Tavily, Gemini)
-- Image generation depends on external API
-- No database (file-based storage)
-- Large blogs may take time
-
 ---
-
-## 🔮 Future Improvements
-
-- Persistent blog storage (DB)
-- Multi-user support
-- SEO optimization
-- Blog export (HTML / PDF)
-- CMS integration (WordPress, Notion)
-
+## 🖼️ Output / Demo
+![Chat UI](output/1.png)
+![Chat UI](output/2.png)
+![Chat UI](output/3.png)
+![Chat UI](output/4.png)
+![Chat UI](output/5.png)
 ---
-
-## 🤝 Contributing
-
-Pull requests are welcome.  
-For major changes, please open an issue first.
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-## 💡 Acknowledgements
-
-- LangGraph & LangChain teams  
-- OpenAI & Gemini APIs  
-- Streamlit for UI  
