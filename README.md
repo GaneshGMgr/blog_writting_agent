@@ -1,52 +1,7 @@
 # ✍️ Blog Writing Agent (LangGraph + Streamlit)
 
-An advanced **AI-powered Blog Writing Agent** built using **LangGraph, LangChain, and Streamlit**.  
-This system automatically generates **well-structured, research-backed blog posts with optional AI-generated images**.
-
----
-
-## 🚀 Features
-
-- 🧠 **Autonomous Blog Generation**
-  - Input a topic → get a complete blog post
-
-- 🔀 **Smart Routing (Closed / Hybrid / Open Book)**
-  - Decides whether research is needed
-  - Adapts writing style accordingly
-
-- 🔎 **Automated Research (Tavily API)**
-  - Fetches real-time web data for accuracy
-
-- 🧩 **Structured Blog Planning**
-  - Generates:
-    - Title
-    - Sections
-    - Goals
-    - Word targets
-
-- ⚡ **Parallel Section Writing**
-  - Each section generated independently (LangGraph workers)
-
-- 🖼️ **AI Image Generation**
-  - Automatically inserts diagrams/images
-  - Uses Gemini image generation
-
-- 💬 **Streaming UI**
-  - Real-time progress tracking in Streamlit
-
-- 📂 **Download Options**
-  - Markdown file
-  - Full bundle (Markdown + images)
-
-- 🕘 **Past Blog Loader**
-  - Load previously generated `.md` files
-
----
-
-## 🖼️ Output / Demo
-
-### Blog Preview
-![Blog Output](Output/result1.png)
+An **AI-powered Blog Writing Agent** built using **LangGraph, LangChain, and Streamlit**.  
+This system automatically generates **structured, research-backed blog posts**.
 
 ---
 
@@ -67,8 +22,6 @@ This system automatically generates **well-structured, research-backed blog post
             ↓
    Reducer Pipeline:
       - Merge Content
-      - Decide Images
-      - Generate Images
             ↓
        Final Blog (Markdown)
 
@@ -77,9 +30,8 @@ This system automatically generates **well-structured, research-backed blog post
 ## 📂 Project Structure
 
     .
-    ├── app.py                         # Streamlit UI
-    ├── blog_writing_agent_backend.py # LangGraph pipeline
-    ├── images/                        # Generated images
+    ├── blog_writing_agent_frontend.py # Streamlit UI
+    ├── blog_writing_agent_backend.py  # LangGraph pipeline
     ├── Output/
     │   └── result1.png
     ├── .env
@@ -89,7 +41,7 @@ This system automatically generates **well-structured, research-backed blog post
 
 ## ⚙️ Installation
 
-    git clone https://github.com/your-username/blog-writing-agent.git
+    git clone https://github.com/GaneshGMgr/blog_writting_agent.git
     cd blog-writing-agent
 
     python -m venv venv
@@ -100,21 +52,9 @@ This system automatically generates **well-structured, research-backed blog post
 
 ---
 
-## 🔑 Environment Variables
-
-Create a `.env` file:
-
-    OPENAI_API_KEY=your_openai_api_key
-    OPENAI_BASE_URL=your_base_url
-    REASONING_MODEL=your_model_name
-    TAVILY_API_KEY=your_tavily_key
-    GOOGLE_API_KEY=your_gemini_key
-
----
-
 ## ▶️ Run the App
 
-    streamlit run app.py
+    streamlit run blog_writing_agent_frontend.py
 
 ---
 
@@ -140,8 +80,6 @@ Create a `.env` file:
 
 ### 5. Reducer Pipeline
 - Merge all sections
-- Decide if images are needed
-- Generate and insert images
 
 ---
 
@@ -153,30 +91,6 @@ Create a `.env` file:
 - **Worker Nodes** → generate sections  
 - **Reducer Subgraph**:
   - merge_content
-  - decide_images
-  - generate_and_place_images  
-
----
-
-## 🖼️ Image Generation Flow
-
-    Markdown → Insert Placeholders
-            ↓
-    Generate Image Prompts
-            ↓
-    Gemini Image API
-            ↓
-    Save to /images
-            ↓
-    Replace placeholders with images
-
----
-
-## 📥 Downloads
-
-- ✅ Markdown file
-- 📦 ZIP bundle (Markdown + images)
-- 🖼️ Images-only ZIP
 
 ---
 
@@ -184,9 +98,8 @@ Create a `.env` file:
 
 - **Frontend:** Streamlit  
 - **Orchestration:** LangGraph  
-- **LLM:** OpenAI-compatible models  
+- **LLM:** Ollama-compatible models  
 - **Search:** Tavily API  
-- **Images:** Google Gemini API  
 - **Data Handling:** Pandas  
 - **Storage:** Local files  
 
